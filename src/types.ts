@@ -34,11 +34,14 @@ export type ClientApiSyndicatedArticle = {
 
 export type ClientApiItem = {
   resolvedUrl: string;
-  title: string;
-  topImageUrl: string;
+  id: string;
   timeToRead: number | null;
   domainMetadata: ClientApiDomainMeta | null;
   syndicatedArticle: ClientApiSyndicatedArticle | null;
+  corpusItem: {
+    title: string;
+    imageUrl: string;
+  };
 };
 
 export type ClientApiRecommendation = {
