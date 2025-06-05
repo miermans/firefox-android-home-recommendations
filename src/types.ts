@@ -32,13 +32,17 @@ export type ClientApiSyndicatedArticle = {
   };
 };
 
+export type ClientApiCorpusItem = {
+  title: string;
+  imageUrl: string;
+};
+
 export type ClientApiItem = {
   resolvedUrl: string;
-  title: string;
-  topImageUrl: string;
   timeToRead: number | null;
   domainMetadata: ClientApiDomainMeta | null;
   syndicatedArticle: ClientApiSyndicatedArticle | null;
+  corpusItem: ClientApiCorpusItem;
 };
 
 export type ClientApiRecommendation = {
